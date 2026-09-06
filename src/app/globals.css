@@ -1,0 +1,132 @@
+@import "tailwindcss";
+
+@theme {
+  --color-offwhite: #f5f6f2;
+  --color-space: #03050b;
+  --color-midnight: #071329;
+  --color-azure: #126bff;
+  --color-deepazure: #0645c5;
+  --color-white: #ffffff;
+
+  --font-display: var(--font-display);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+}
+
+:root {
+  --space: #03050b;
+  --midnight: #071329;
+  --azure: #126bff;
+  --deepazure: #0645c5;
+  --offwhite: #f5f6f2;
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html {
+  scroll-behavior: auto;
+}
+
+html.lenis,
+html.lenis body {
+  height: auto;
+}
+
+.lenis.lenis-smooth {
+  scroll-behavior: auto !important;
+}
+
+.lenis.lenis-smooth [data-lenis-prevent] {
+  overscroll-behavior: contain;
+}
+
+.lenis.lenis-stopped {
+  overflow: hidden;
+}
+
+body {
+  background: var(--space);
+  color: var(--offwhite);
+  font-family: var(--font-geist-sans), Arial, Helvetica, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
+}
+
+::selection {
+  background: var(--azure);
+  color: var(--offwhite);
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
+}
+::-webkit-scrollbar-track {
+  background: var(--space);
+}
+::-webkit-scrollbar-thumb {
+  background: #1a2a4a;
+  border-radius: 10px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--azure);
+}
+
+/* Utility: text masking reveal */
+.mask-line {
+  overflow: hidden;
+  display: block;
+}
+.mask-line > span {
+  display: inline-block;
+  will-change: transform;
+}
+
+/* Utility: hide scrollbar for horizontal scrollers */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+/* Gradient text helper */
+.text-gradient-azure {
+  background: linear-gradient(120deg, #126bff 0%, #5ea0ff 50%, #126bff 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Large editorial divider */
+.chapter-label {
+  letter-spacing: 0.35em;
+  text-transform: uppercase;
+  font-size: 0.7rem;
+  font-weight: 500;
+}
+
+/* Grid blueprint helper for backgrounds */
+.bp-grid {
+  background-image:
+    linear-gradient(rgba(18, 107, 255, 0.07) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(18, 107, 255, 0.07) 1px, transparent 1px);
+  background-size: 60px 60px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
