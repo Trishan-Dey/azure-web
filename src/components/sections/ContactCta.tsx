@@ -50,7 +50,7 @@ export default function ContactCta() {
         <p data-cta-reveal className="chapter-label mb-8 text-white/70">
           FINAL CALL
         </p>
-        <h2 className="font-display text-[14vw] font-black uppercase leading-[0.88] tracking-tight sm:text-[8vw]">
+        <h2 className="font-display text-[12vw] font-black uppercase leading-[0.88] tracking-tight sm:text-[7vw]">
           <span data-cta-reveal className="block">Have an</span>
           <span data-cta-reveal className="block">
             idea?

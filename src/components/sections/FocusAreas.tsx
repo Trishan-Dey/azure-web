@@ -147,13 +147,13 @@ export default function FocusAreas() {
             <div className={i % 2 === 1 ? "lg:order-2" : ""}>
               <p className="chapter-label mb-6 text-azure/60">{area.num}</p>
               <h3
-                className="mask-line font-display text-[13vw] font-extrabold uppercase leading-[0.9] tracking-tight text-white sm:text-[7vw]"
+                className="mask-line font-display text-[11vw] font-extrabold uppercase leading-[0.9] tracking-tight text-white sm:text-[6vw]"
               >
                 <span data-title className="block">
                   {area.title}
                 </span>
               </h3>
-              <p className="mt-4 text-xl font-medium text-azure sm:text-2xl">
+              <p className="mt-4 text-lg font-medium text-azure sm:text-xl">
                 {area.tagline}
               </p>
               <p className="mt-6 max-w-md text-sm leading-relaxed text-white/55 sm:text-base">

@@ -1,15 +1,15 @@
 "use client";
 
-import { scrollToSection } from "@/lib/scroll";
+import Link from "next/link";
 import Logo from "@/components/Logo";
 
 const PAGES = [
-  { label: "About", id: "about" },
-  { label: "Projects", id: "projects" },
-  { label: "R&D", id: "rd" },
-  { label: "Team", id: "team" },
-  { label: "Updates", id: "updates" },
-  { label: "Contact", id: "contact" },
+  { label: "About", href: "/about" },
+  { label: "Projects", href: "/projects" },
+  { label: "R&D", href: "/rd" },
+  { label: "Team", href: "/team" },
+  { label: "Updates", href: "/updates" },
+  { label: "Contact", href: "/contact" },
 ];
 
 export default function Footer() {
@@ -24,7 +24,7 @@ export default function Footer() {
           {/* Brand */}
           <div className="max-w-sm">
             <div className="flex items-center gap-2">
-              <Logo className="h-9 w-auto drop-shadow-sm" />
+              <Logo className="h-12 w-auto drop-shadow-sm" />
             </div>
             <p className="mt-4 text-sm text-white/50">Where Vision Meets Tech.</p>
             <p className="mt-6 font-mono text-xs tracking-[0.2em] text-azure">
@@ -38,12 +38,12 @@ export default function Footer() {
             <ul className="grid grid-cols-2 gap-x-8 gap-y-3 sm:grid-cols-3">
               {PAGES.map((p) => (
                 <li key={p.label}>
-                  <button
-                    onClick={() => scrollToSection(p.id)}
+                  <Link
+                    href={p.href}
                     className="text-sm text-white/70 transition-colors hover:text-azure"
                   >
                     {p.label}
-                  </button>
+                  </Link>
                 </li>
               ))}
             </ul>

@@ -66,7 +66,7 @@ export default function Rd() {
 
       <div className="relative mx-auto max-w-[1400px] px-6 sm:px-10">
         <p className="chapter-label mb-6 text-azure/70">R&D — THE LAB</p>
-        <h2 className="font-display text-[12vw] font-extrabold uppercase leading-[0.92] tracking-tight text-white sm:text-[6vw]">
+        <h2 className="font-display text-[10vw] font-extrabold uppercase leading-[0.92] tracking-tight text-white sm:text-[5vw]">
           Beyond what
           <br />
           <span className="text-white/40">we&apos;re building</span>{" "}
@@ -85,7 +85,7 @@ export default function Rd() {
                   {area.code}
                 </span>
                 <div>
-                  <h3 className="font-display text-3xl font-bold uppercase tracking-tight text-white transition-colors group-hover:text-azure sm:text-4xl">
+                  <h3 className="font-display text-2xl font-bold uppercase tracking-tight text-white transition-colors group-hover:text-azure sm:text-3xl">
                     {area.title}
                   </h3>
                   <p className="mt-2 max-w-md text-sm leading-relaxed text-white/50">

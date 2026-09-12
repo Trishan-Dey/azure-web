@@ -99,7 +99,7 @@ export default function Updates() {
     >
       <div className="mx-auto max-w-[1400px] px-6 sm:px-10">
         <p className="chapter-label mb-6 text-azure/70">FROM AZURE SYSTEMS</p>
-        <h2 className="font-display text-[13vw] font-extrabold uppercase leading-[0.9] tracking-tight text-white sm:text-[6vw]">
+        <h2 className="font-display text-[10.5vw] font-extrabold uppercase leading-[0.9] tracking-tight text-white sm:text-[5.5vw]">
           Inside
           <br />
           <span className="text-gradient-azure">the build.</span>
@@ -123,7 +123,7 @@ export default function Updates() {
                 <p className="font-mono text-[0.65rem] uppercase tracking-widest text-azure/70">
                   {post.tag}
                 </p>
-                <h3 className="mt-3 font-display text-2xl font-bold uppercase leading-tight text-white transition-colors group-hover:text-azure">
+                <h3 className="mt-3 font-display text-xl font-bold uppercase leading-tight text-white transition-colors group-hover:text-azure">
                   {post.title}
                 </h3>
                 <p className="mt-3 text-sm leading-relaxed text-white/50">

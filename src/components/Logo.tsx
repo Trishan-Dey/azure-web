@@ -8,7 +8,7 @@ type LogoProps = {
 };
 
 export default function Logo({
-  className = "h-7 w-auto",
+  className = "h-9 w-auto",
   alt = "Azure Systems",
 }: LogoProps) {
   return (

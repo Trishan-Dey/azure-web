@@ -2,7 +2,7 @@
 
 import { Canvas, useFrame } from "@react-three/fiber";
 import { Float, Stars } from "@react-three/drei";
-import { Suspense, useMemo, useRef } from "react";
+import { Suspense, useMemo, useRef, type MutableRefObject } from "react";
 import * as THREE from "three";
 
 const AZURE = "#126bff";
@@ -92,7 +92,7 @@ function OrbitRings() {
   );
 }
 
-function Scene({ scrollProgress = 0 }: { scrollProgress?: number }) {
+function Scene({ progressRef }: { progressRef?: MutableRefObject<{ v: number }> }) {
   const groupRef = useRef<THREE.Group>(null);
   const isMobile = useMemo(
     () =>
@@ -103,8 +103,9 @@ function Scene({ scrollProgress = 0 }: { scrollProgress?: number }) {
   useFrame((state) => {
     if (!groupRef.current) return;
     if (!isMobile) {
+      const p = progressRef?.current.v ?? 0;
       groupRef.current.position.y =
-        scrollProgress * 0.6 + Math.sin(state.clock.elapsedTime * 0.8) * 0.05;
+        p * 0.6 + Math.sin(state.clock.elapsedTime * 0.8) * 0.05;
       groupRef.current.rotation.z = state.pointer.x * 0.2;
       groupRef.current.rotation.x = -state.pointer.y * 0.15;
     }
@@ -125,7 +126,11 @@ function Scene({ scrollProgress = 0 }: { scrollProgress?: number }) {
   );
 }
 
-export default function CubeSat3D({ scrollProgress = 0 }: { scrollProgress?: number }) {
+export default function CubeSat3D({
+  progressRef,
+}: {
+  progressRef?: MutableRefObject<{ v: number }>;
+}) {
   return (
     <Canvas
       dpr={[1, 1.5]}
@@ -137,7 +142,7 @@ export default function CubeSat3D({ scrollProgress = 0 }: { scrollProgress?: num
       <directionalLight position={[-4, -2, -2]} intensity={0.4} color={AZURE} />
       <pointLight position={[0, 2, 3]} intensity={0.5} color={AZURE} />
       <Suspense fallback={null}>
-        <Scene scrollProgress={scrollProgress} />
+        <Scene progressRef={progressRef} />
       </Suspense>
     </Canvas>
   );

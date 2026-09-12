@@ -36,9 +36,10 @@ export default function Journey() {
               trigger: ref.current,
               start: "top top",
               end: () => `+=${desktopRef.current!.scrollWidth - window.innerWidth}`,
-              scrub: 1,
+              scrub: 1.4,
               pin: true,
               invalidateOnRefresh: true,
+              anticipatePin: 2,
             },
           });
         }
@@ -60,7 +61,7 @@ export default function Journey() {
     >
       <div className="mx-auto max-w-[1400px] px-6 sm:px-10">
         <p className="chapter-label mb-6 text-azure/70">OUR JOURNEY</p>
-        <h2 className="font-display text-[13vw] font-extrabold uppercase leading-[0.9] tracking-tight text-white sm:text-[6vw]">
+        <h2 className="font-display text-[10.5vw] font-extrabold uppercase leading-[0.9] tracking-tight text-white sm:text-[5.5vw]">
           From first
           <br />
           <span className="text-gradient-azure">spark.</span>
@@ -69,7 +70,7 @@ export default function Journey() {
 
       {/* Desktop horizontal timeline */}
       <div className="mt-12 hidden overflow-hidden md:block">
-        <div ref={desktopRef} data-track className="flex w-max items-stretch gap-8 px-10">
+        <div ref={desktopRef} data-track className="flex w-max items-stretch gap-8 px-10 will-change-transform">
           {MILESTONES.map((m, i) => (
           <div key={m.title} className="flex w-[420px] shrink-0 items-stretch">
             <div
@@ -78,7 +79,7 @@ export default function Journey() {
               <p className={`font-mono text-xs tracking-widest ${m.active ? "text-azure" : "text-white/40"}`}>
                 {m.year}
               </p>
-              <h3 className="mt-3 font-display text-2xl font-bold uppercase leading-tight text-white">
+              <h3 className="mt-3 font-display text-xl font-bold uppercase leading-tight text-white">
                 {m.title}
               </h3>
               <p className="mt-2 text-sm text-white/50">{m.sub}</p>
@@ -112,7 +113,7 @@ export default function Journey() {
             <p className={`font-mono text-xs tracking-widest ${m.active ? "text-azure" : "text-white/40"}`}>
               {m.year}
             </p>
-            <h3 className="mt-2 font-display text-xl font-bold uppercase leading-tight text-white">
+            <h3 className="mt-2 font-display text-lg font-bold uppercase leading-tight text-white">
               {m.title}
             </h3>
             <p className="mt-1 text-sm text-white/50">{m.sub}</p>

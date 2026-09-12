@@ -68,7 +68,7 @@ export default function Loader() {
       style={{ clipPath: "inset(0 0 0% 0)" }}
     >
       <div ref={innerRef} className="flex flex-col items-center gap-6">
-        <Logo className="h-16 w-auto drop-shadow-md sm:h-20" />
+        <Logo className="h-24 w-auto drop-shadow-md sm:h-28" />
         <p
           ref={tagRef}
           className="chapter-label text-azure/80 opacity-0"

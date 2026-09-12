@@ -75,7 +75,7 @@ export default function Team() {
 
       <div className="relative mx-auto max-w-[1400px] px-6 sm:px-10">
         <p className="chapter-label mb-8 text-deepazure/70">THE PEOPLE BEHIND IT</p>
-        <h2 className="font-display text-[13vw] font-extrabold uppercase leading-[0.92] tracking-tight sm:text-[6.5vw]">
+        <h2 className="font-display text-[11vw] font-extrabold uppercase leading-[0.92] tracking-tight sm:text-[5.5vw]">
           <MaskLine>Built by students.</MaskLine>
           <MaskLine className="text-deepazure">Driven by curiosity.</MaskLine>
         </h2>
@@ -85,7 +85,7 @@ export default function Team() {
             <div key={m.name} data-card className="group">
               <Portrait initials={m.initials} hue={m.hue} />
               <div className="mt-5 flex items-baseline justify-between">
-                <h3 className="font-display text-xl font-bold uppercase leading-tight tracking-tight">
+                <h3 className="font-display text-lg font-bold uppercase leading-tight tracking-tight">
                   {m.name}
                 </h3>
                 <span className="font-mono text-[0.6rem] text-deepazure/50">

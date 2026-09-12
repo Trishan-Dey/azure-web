@@ -2,8 +2,9 @@
 
 import { MaskLine } from "@/lib/anim";
 import { useInView } from "@/lib/useInView";
-import { scrollToSection } from "@/lib/scroll";
+import Link from "next/link";
 import HeroVisual from "@/components/HeroVisual";
+import Logo from "@/components/Logo";
 
 export default function Hero() {
   const { ref: visualRef, inView } = useInView<HTMLDivElement>();
@@ -37,8 +38,10 @@ export default function Hero() {
 
       {/* Statement */}
       <div className="relative z-10 flex flex-col items-center px-6 text-center">
-        <p className="chapter-label mb-6 text-azure/80">AZURE SYSTEMS</p>
-        <h1 className="font-display text-[13vw] font-extrabold uppercase leading-[0.9] tracking-tight text-white sm:text-[10vw] lg:text-[8.5vw]">
+        <p className="mb-6 drop-shadow-md">
+          <Logo className="h-10 w-auto sm:h-12" />
+        </p>
+        <h1 className="font-display text-[11vw] font-extrabold uppercase leading-[0.9] tracking-tight text-white sm:text-[9vw] lg:text-[7.5vw]">
           <MaskLine>Where</MaskLine>
           <MaskLine className="text-gradient-azure">Vision</MaskLine>
           <MaskLine>Meets Tech.</MaskLine>
@@ -46,13 +49,13 @@ export default function Hero() {
         <p className="mt-8 max-w-md text-sm leading-relaxed text-white/50 sm:text-base">
           “Student-led innovation across aerospace, defence-tech and AI.”
         </p>
-        <button
-          onClick={() => scrollToSection("about")}
+        <Link
+          href="/about"
           className="group mt-12 flex items-center gap-2 text-xs font-semibold tracking-[0.25em] text-white/70 transition-colors hover:text-azure"
         >
           EXPLORE
           <span className="inline-block h-px w-10 bg-current transition-all group-hover:w-14" />
-        </button>
+        </Link>
       </div>
 
       {/* Scroll indicator */}

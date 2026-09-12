@@ -55,7 +55,7 @@ export default function About() {
           WHO WE ARE
         </p>
 
-        <h2 className="font-display text-[12vw] font-extrabold uppercase leading-[0.95] tracking-tight text-midnight sm:text-[7vw] lg:text-[6vw]">
+        <h2 className="font-display text-[10.5vw] font-extrabold uppercase leading-[0.95] tracking-tight text-midnight sm:text-[6.5vw] lg:text-[5.5vw]">
           <MaskLine>We build.</MaskLine>
           <MaskLine>We experiment.</MaskLine>
           <MaskLine>We learn.</MaskLine>
@@ -63,7 +63,7 @@ export default function About() {
 
         <div className="mt-16 grid gap-10 md:grid-cols-2">
           <div className="md:col-start-2 md:pr-10">
-            <p data-reveal className="text-xl leading-relaxed text-midnight/80 sm:text-2xl">
+            <p data-reveal className="text-lg leading-relaxed text-midnight/80 sm:text-xl">
               Azure Systems is a student-led innovation startup focused on{" "}
               <span className="font-semibold text-deepazure">aerospace</span>,{" "}
               <span className="font-semibold text-deepazure">defence-tech</span> and{" "}

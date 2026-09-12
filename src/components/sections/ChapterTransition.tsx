@@ -26,7 +26,7 @@ export default function ChapterTransition({
         {words.map((w, i) => (
           <span
             key={i}
-            className="mask-line font-display text-[16vw] font-extrabold uppercase leading-[0.9] tracking-tight text-white sm:text-[9vw]"
+            className="mask-line font-display text-[14vw] font-extrabold uppercase leading-[0.9] tracking-tight text-white sm:text-[7.5vw]"
           >
             <span
               className="block text-white/95"

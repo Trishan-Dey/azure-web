@@ -40,7 +40,7 @@ export default function BrandStatement() {
             trigger: sectionRef.current,
             start: `${i * chunk}% top`,
             end: `${(i + 1) * chunk}% top`,
-            scrub: 0.5,
+            scrub: 1,
           },
         });
         tl.fromTo(
@@ -70,7 +70,7 @@ export default function BrandStatement() {
               ref={(el) => {
                 wordRefs.current[i] = el;
               }}
-              className="absolute font-display text-[19vw] font-black uppercase leading-none tracking-tight text-white sm:text-[14vw]"
+              className="absolute font-display text-[16vw] font-black uppercase leading-none tracking-tight text-white will-change-transform sm:text-[12vw]"
               style={{ opacity: 0 }}
             >
               <WordMark word={w} />
