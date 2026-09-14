@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import ChapterTransition from "@/components/sections/ChapterTransition";
 import CurrentMission from "@/components/sections/CurrentMission";
+import FlightData from "@/components/sections/FlightData";
 
 export const metadata: Metadata = {
   title: "Project CubeSat — Azure Systems",
@@ -17,6 +18,7 @@ export default function CubeSatPage() {
         bg="bg-midnight"
       />
       <CurrentMission />
+      <FlightData />
     </main>
   );
 }
