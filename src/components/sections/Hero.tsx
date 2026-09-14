@@ -49,13 +49,15 @@ export default function Hero() {
         <p className="mt-8 max-w-md text-sm leading-relaxed text-white/50 sm:text-base">
           “Student-led innovation across aerospace, defence-tech and AI.”
         </p>
-        <Link
-          href="/about"
-          className="group mt-12 flex items-center gap-2 text-xs font-semibold tracking-[0.25em] text-white/70 transition-colors hover:text-azure"
-        >
-          EXPLORE
-          <span className="inline-block h-px w-10 bg-current transition-all group-hover:w-14" />
-        </Link>
+        <div className="mt-10 flex flex-col items-center gap-3 sm:mt-12 sm:flex-row sm:gap-4">
+          <Link
+            href="/contact"
+            className="group flex items-center gap-2 text-xs font-semibold tracking-[0.25em] text-azure transition-colors hover:text-white"
+          >
+            EXPLORE PROJECTS → MEET THE TEAM
+            <span className="inline-block h-px w-10 bg-current transition-all group-hover:w-14" />
+          </Link>
+        </div>
       </div>
 
       {/* Scroll indicator */}

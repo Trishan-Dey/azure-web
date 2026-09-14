@@ -8,6 +8,7 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 import Logo from "@/components/Logo";
 
 const LINKS = [
+  { label: "HOME", href: "/" },
   { label: "ABOUT", href: "/about" },
   { label: "PROJECTS", href: "/projects" },
   { label: "R&D", href: "/rd" },
