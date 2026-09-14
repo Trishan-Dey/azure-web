@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import ChapterTransition from "@/components/sections/ChapterTransition";
 import Team from "@/components/sections/Team";
+import TeamGrid from "@/components/sections/TeamGrid";
 
 export const metadata: Metadata = {
   title: "Team — Azure Systems",
@@ -17,6 +18,7 @@ export default function TeamPage() {
         bg="bg-midnight"
       />
       <Team />
+      <TeamGrid />
     </main>
   );
 }
