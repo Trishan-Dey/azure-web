@@ -8,26 +8,26 @@ import { useInView } from "@/lib/useInView";
 
 const PEOPLE = [
   {
-    name: "HOLDEN AZURE",
-    role: "FOUNDER · SYSTEMS",
+    name: "TRISHAN DEY",
+    role: "SOFTWARE & AI ENGINEERING",
     bio: "Keeps the orbital and the ground honest. Runs hardware here, writes the ops that fly.",
     slot: "md:col-start-1 md:row-start-2",
   },
   {
-    name: "S. KHAN",
-    role: "FLIGHT SOFTWARE",
+    name: "SHIVAM BANERJEE",
+    role: "SYSTEMS & TECHNICAL DEVELOPMENT",
     bio: "Owns the stack between radio and orbit — telemetry, FEC, and the code that refuses to crash silently.",
     slot: "md:col-start-5 md:row-start-4",
   },
   {
-    name: "A. ZHANG",
-    role: "MECHANICAL · EPS",
+    name: "SUBHAJIT PAL",
+    role: "HARDWARE ENGINEERING",
     bio: "The chassis, the power budget, and the discipline to keep a lunchbox-sized satellite alive in vacuum.",
     slot: "md:col-start-3 md:row-start-6",
   },
   {
-    name: "M. NOVAK",
-    role: "GROUND SEGMENT",
+    name: "HITESH DASH",
+    role: "OPERATIONS & RESOURCES",
     bio: "Turns the downlink into a dashboard you can actually read — antenna, demod, and the telemetry lake.",
     slot: "md:col-start-7 md:row-start-8",
   },
